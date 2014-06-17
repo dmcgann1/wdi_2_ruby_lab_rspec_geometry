@@ -57,6 +57,12 @@ describe Triangle do
       expect(triangle.side3).to eq 6
     end
   end
+
+  describe '#perimeter' do
+    it 'calculates the perimeter' do
+      expect(triangle.perimeter).to eq 14
+    end
+  end
 end
 
 
