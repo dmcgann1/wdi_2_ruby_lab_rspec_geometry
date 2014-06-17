@@ -1,28 +1,35 @@
 require_relative '../lib/rectangle'
+require_relative '../lib/circle'
 
 describe Rectangle do
-  describe '#initialize' do
-    it 'accepts a length and a width' do
-      rectangle = Rectangle.new(6, 4)
+  let(:rectangle) {Rectangle.new(7,5)}
 
-      expect(rectangle.length).to eq 6
-      expect(rectangle.width).to eq 4
+  describe 'attributes' do
+    it 'accepts a length and a width' do
+      expect(rectangle.length).to eq 7
+      expect(rectangle.width).to eq 5
     end
   end
 
   describe '#area' do
     it 'calculates the area' do
-      rectangle = Rectangle.new(10, 2)
-
-      expect(rectangle.area).to eq 20
+      expect(rectangle.area).to eq 35
     end
   end
 
   describe '#perimeter' do
     it 'calculates the perimeter' do
-      rectangle = Rectangle.new(8,20)
+      expect(rectangle.perimeter).to eq 24
+    end
+  end
+end
 
-      expect(rectangle.perimeter).to eq 56
+describe Circle do
+  let(:circle) {Circle.new(5)}
+
+  describe 'attributes' do
+    it 'accepts a radius' do
+      expect(circle.radius).to eq 5
     end
   end
 end
