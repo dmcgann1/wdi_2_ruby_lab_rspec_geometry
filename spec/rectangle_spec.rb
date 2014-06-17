@@ -1,5 +1,6 @@
 require_relative '../lib/rectangle'
 require_relative '../lib/circle'
+require_relative '../lib/triangle'
 
 describe Rectangle do
   let(:rectangle) {Rectangle.new(7,5)}
@@ -45,3 +46,17 @@ describe Circle do
     end
   end
 end
+
+describe Triangle do
+  let(:triangle) {Triangle.new(4,4,6)}
+
+  describe '#attributes' do
+    it 'accepts a length for each of three sides' do
+      expect(triangle.side1).to eq 4
+      expect(triangle.side2).to eq 4
+      expect(triangle.side3).to eq 6
+    end
+  end
+end
+
+
