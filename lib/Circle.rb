@@ -7,4 +7,8 @@ class Circle
   def area
     (radius ** 2) * 3.14
   end
+
+  def circumference
+    radius * 2 * 3.14
+  end
 end
